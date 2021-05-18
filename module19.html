@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <link rel="stylesheet" href="src/css/style.css">
+     <title>О нас</title>
+</head>
+
+ <body>
+     <header class="menu">
+          <a class="menu__logo" href="https://skillfactory.ru/" ><img src="src/img/SkillDrive.svg" alt="SkillDrive"></a> 
+          <nav class="menu__frame is-desktop">     
+               <a class="menu__frame-item" href="module17.html">О нас</a>
+               <a class="menu__frame-item" href="">Условия</a>
+               <a class="menu__frame-item" href="">Частые вопросы</a>
+          </nav>     
+          <button class="menu__button is-desktop">Войти</button>
+          <div class="mobile__burger is-mobile">
+               <img src="src/img/burger.svg" alt="Мобильное меню">
+          </div>
+          <div class="menu__mobile is-mobile is-animated">
+               <a class="menu__mobile-logo" href="https://skillfactory.ru/" >
+                    <img src="src/img/SkillDrive.svg" alt="SkillDrive"></a>
+               <span class="menu__mobile-close"><img src="src/img/close.svg" alt="ВКонтакте"></span>
+               <nav class="menu__mobile-wrapper">
+                    <a class="menu__mobile-item" href="module17.html">О нас</a>
+                    <a class="menu__mobile-item" href="">Условия</a>
+                    <a class="menu__mobile-item" href="module19.html">Частые вопросы</a>       
+               </nav>   
+               <div class="menu__mobile-btn_cont">
+                    <button class="menu__mobile-button">Войти</button>
+               </div>         
+          </div>           
+     </header>
+     
+   <main> 
+     <section class="questions">
+          <div class="content__container">
+               <img src="src/img/undraw_questions.png" alt="Частые вопросы">
+               <h1>Частые вопросы</h1>
+               <div class="questions-text">
+                    <p>Отвечаем на вопросы, которые у вас могут возникнуть.</p>
+               </div>
+               <button class="questions-collapsible">Могу ли я отменить бронь?</button>
+               <div class="questions-content">
+                    <p></p>
+               </div>
+               <button class="questions-collapsible">Могу ли я вернуть деньги, если не подошёл автомобиль?</button>
+               <div class="questions-content">
+                    <p></p>
+               </div>
+               <button class="questions-collapsible">Что делать, если случилось ДТП?</button>
+               <div class="questions-content">
+                    <p></p>
+               </div>
+               <button class="questions-collapsible is-active">Могу ли я оставить автомобиль в удобном для меня месте?</button>
+               <div class="questions-content">
+                    <p>Данный вопрос обсуждается с собственником, но как правило автомобиль нужно вернуть туда, где вы его получили.</p>
+               </div>
+
+               <button class="questions-collapsible">Что делать, если собственник просит заплатить ему напрямую?</button>
+               <div class="questions-content">
+                    <p></p>
+               </div>
+               <button class="questions-collapsible">Должен ли я заправлять автомобиль?</button>
+               <div class="questions-content">
+                    <p></p>
+               </div>
+          
+          </div>
+     </section>
+   </main>
+   <footer class="footer__frame">
+     <span class="footer__frame-logo">© SkillDrive Inc. 2020</span>
+     <div class="footer__frame-social">
+          <a href="" class="icon-vk" target="_blank" rel="nofollow"></a>
+          <a href="" class="icon-instagram" target="_blank" rel="nofollow"></a>
+          <a href="" class="icon-f" target="_blank" rel="nofollow"></a>
+     </div>
+   </footer>
+ </body>
+ <script type="text/javascript" src="src/js/script.js"></script>
+ <script>
+     var coll = document.getElementsByClassName("questions-collapsible");
+     var i;
+     
+     for (i = 0; i < coll.length; i++) {
+       coll[i].addEventListener("click", function() {
+         this.classList.toggle("active");
+         var content = this.nextElementSibling;
+         if (content.style.maxHeight){
+           content.style.maxHeight = null;
+         } else {
+           content.style.maxHeight = content.scrollHeight + "px";
+         } 
+       });
+     }
+     </script>
+</html>

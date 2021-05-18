@@ -1,0 +1,58 @@
+/*раздел Частые вопросы*/
+.questions {
+    margin-top: 60px;
+    margin-bottom: 120px;
+    &-content {
+        padding: 0 18px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+        background-color: rgba(97, 161, 153, 0.15);
+        font-size: 20px;
+        @include breakpoint(medium){
+          font-size: 14px;
+        }
+    }
+    &-collapsible {
+      background-color:  rgba(97, 161, 153, 0.1);
+      color:$black;
+      cursor: pointer;
+      width: 100%;;
+      padding: 19px;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 20px;
+      
+      @include breakpoint(medium){
+        font-size: 14px;
+      }
+      
+    }
+    &-collapsible:hover {
+      background-color:rgba(97, 161, 153, 0.1);
+    }
+    &-collapsible:after {
+      content: url("../img/Vector1.png");
+      color:#A0A7AD;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    .active:after {
+      content: url("../img/Vector2.png");    
+    }
+    .active{
+      color:#61A199; 
+    }
+    &-text {
+      font-size: 24px;
+      margin-top: 30px;
+      text-align: center;
+      @include breakpoint(medium){
+        margin-top: 10px;
+        font-size: 16px;
+      }
+    }
+    
+  }

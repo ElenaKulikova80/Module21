@@ -1,0 +1,27 @@
+.is-animated {
+    transition: all 400ms ease;
+  }
+  .content__container {
+    &.is-align-center {
+      text-align: center;
+    }
+    margin: 0 auto;
+    @include breakpoint(large) {
+      width: 1026px;//1440
+    }
+    @include breakpoint(medium) {
+      width: 100%;
+      //max-width: 90%; /*16.03*/
+      //margin: 0 auto; /*16.03*/
+    }
+  }
+  .is-desktop {
+    @include breakpoint(medium) {
+      display: none!important;
+    }
+  }
+  .is-mobile {
+    @include breakpoint(large) {
+      display: none!important;
+    }
+  }

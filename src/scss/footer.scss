@@ -1,0 +1,39 @@
+.footer__frame {
+    display:flex;
+    flex-wrap:nowrap;
+    height: 124px;
+    left: 0px;
+    top: 2059px;
+    background:$purple;
+    @include breakpoint(medium) {
+      flex-wrap: wrap;
+      
+    }
+    
+    &-logo {
+      font-size: 16px;
+      line-height: 19px;
+      color: #FFFFFF;
+      margin: 53px 0 53px 40px;
+      @include breakpoint(medium) {
+        width: 100%;
+        margin: 30px 0 0 40px;
+      }
+    }
+    &-social {
+      margin: 48px 42px 48px auto;
+      a {
+        font-size: 27px;
+        color:#FFFFFF;
+        &:hover {
+          color:cornflowerblue;
+        }
+        & + a {
+          margin-left: 19px;
+        }
+      }
+      @include breakpoint(medium) {
+        margin: 17px 0 0 40px;
+      }
+    }
+  }
