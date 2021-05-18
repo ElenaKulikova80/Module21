@@ -1,0 +1,1 @@
+(()=>{"use strict";const e=document.querySelector(".mobile__burger"),t=document.querySelector(".menu__mobile"),c=document.querySelector(".menu__mobile-close");function n(){t.classList.add("is-active")}function i(){t.classList.remove("is-active")}document.addEventListener("DOMContentLoaded",(function(){e.addEventListener("click",n),c.addEventListener("click",i)}))})();
